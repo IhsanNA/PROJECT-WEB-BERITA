@@ -1,9 +1,8 @@
 from django.contrib import admin
-from .models import berita,categories, Customuser
-# Register your models 
+from . models import Customuser,berita, categories
+# Register your models s
+
 admin.site.register(Customuser)
-
-
 
 class categoriesAdmin(admin.ModelAdmin):
     list_display = ['namaKategori']
