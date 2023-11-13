@@ -1,0 +1,245 @@
+{% extends 'core/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}WELCOME{% endblock %}</title>
+    {% block htmlhead %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    {% endblock htmlhead %}
+</head>
+<body>
+    {% block content %}
+
+    <!-- carousel auto Slide -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://akcdn.detik.net.id/visual/2022/10/23/ilustrasi-bayi-menangis_169.jpeg?w=450&q=90" class="d-block w-100 mx-auto" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://akcdn.detik.net.id/visual/2023/10/27/love-story-oktober-2023_169.jpeg?w=450&q=90" class="d-block w-100 mx-auto" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://akcdn.detik.net.id/visual/2023/02/07/ilustrasi-diabetes-anak-3_169.jpeg?w=450&q=90" class="d-block w-100 mx-auto" alt="...">
+          </div>
+        </div>
+        <button  id="kon" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+<!-- weather Widget -->
+<a class="weatherwidget-io" href="https://forecast7.com/en/n6d87107d49/west-bandung-regency/" data-label_1="BANDUNG BARAT" data-label_2="WEATHER" data-theme="original" data-basecolor="#dd4747" >BANDUNG BARAT WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<br>
+
+<!-- Grid Row columns  -->
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <br>
+        <img src="https://akcdn.detik.net.id/visual/2022/05/18/ilustrasi-perempuan-minum-air-mineral_169.jpeg?w=650&q=90" alt="">
+      </div>
+      <div class="col">
+        <br>
+        <h5>Air Putih dan Rekomendasi Minuman Lain untuk Ginjal yang Sehat</h5>
+        <br>
+        <p>Ingat ginjal, ingat asupan cairan buat tubuh. Namun, minuman untuk ginjal yang sehat tak hanya air putih. Lantas, apa saja rekomendasinya?</p>
+        <br>
+        <p>Menjaga gaya hidup tetap aktif dan diet bernutrisi lengkap jadi langkah menjaga ginjal tetap sehat.</p>
+        <br>
+        <p>Ginjal punya tugas penting untuk menyaring 'sampah', kelebihan air, dan apa pun yang mencemari darah. 'Sampah' disimpan di kemih dan dikeluarkan bersama urine.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <br>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <h3>What Tranding Now</h3>
+      </div>
+   </div>
+  </div>
+<br>
+
+  <!-- Big Card -->
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/visual/2022/09/07/ilustrasi-ronsen-tulang-belakang_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">7 Kebiasaan Buruk yang Bisa Merusak Tulang, Duduk Terlalu Lama</h5>
+          <p class="card-text">Seiring bertambahnya usia, tulang Anda akan mengalami kerusakan</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/visual/2023/04/12/ilustrasi-stres-1_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Banyak Berita Pilpres, Hati-hati Terkena Election Stress Disorder</h5>
+          <p class="card-text">Election stress disorder ternyata benar-benar nyata. Hal ini bisa Anda alami</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/visual/2021/09/01/gerombolan-hewan-pengerat-kuasai-perumahan-elit-di-argentina-5_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">'Masbro' Capybara, Hewan Paling Friendly di Dunia</h5>
+          <p class="card-text">Capybara jadi hewan favorit banyak orang. Saking banyaknya yang suka</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/visual/2021/07/06/ilustrasi-rawon_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Kalahkan Ramen, Rawon Jadi Sup Terenak di Dunia Versi Taste Atlas</h5>
+          <p class="card-text">Rawon jadi sajian sup terenak di dunia. Rawon berdiri di posisi puncak </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+
+  <!-- Grid Teks -->
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <h3>Update Today</h3>
+      </div>
+  </div>
+  </div>
+
+  <br>
+
+
+
+<!-- Card Title -->
+<div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img src="https://akcdn.detik.net.id/visual/2019/12/06/3bb19513-c346-4058-bc9f-55894befe961_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pertama Kalinya, Mikroplastik Ditemukan dalam ASI</h5>
+              <p class="card-text">Mikroplastik kini telah jadi masalah global. Studi teranyar bahkan menemukan mikroplastik</p>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img src="https://akcdn.detik.net.id/community/media/visual/2023/11/05/kamp-pengungsi-maghazi-di-gaza-diserang-israel-30-orang-tewas-4_169.jpeg?w=700&q=90" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Ratusan Ribu Pekerjaan di Gaza Hilang Buntut Konflik</h5>
+              <p class="card-text">Badan Tenaga Kerja Perserikatan Bangsa-Bangsa (PBB) mencatat 61% pekerjaan hilang di Gaza akibat perang.</p>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img src="https://akcdn.detik.net.id/visual/2022/06/15/reshuffle-kabinet-8_169.png?w=650&q=90" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Viral Hidup Mewah Kepala BPN Jaktim, Hadi Tjahjanto Bakal Tindak Tegas</h5>
+              <p class="card-text">Menteri Agraria dan Tata Ruang/Badan Pertanahan Nasional (ATR/BPN) Hadi Tjahjanto bakal menindak</p>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img src="https://akcdn.detik.net.id/visual/2022/01/04/ilustrasi-perempuan-menangis_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Studi: Risiko Gangguan Kesehatan Mental Meningkat usai Covid-19</h5>
+              <p class="card-text">Studi terbaru menunjukkan orang yang telah pulih dari Covid-19 memiliki risiko lebih tinggi</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+<!-- Footer  -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>About</h6>
+        <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+      </div>
+   
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Categories</h6>
+        <ul class="footer-links">
+          <li><a href="/trending">trending</a></li>
+          <li><a href="/olahraga">olahraga</a></li>
+          <li><a href="/politik">politik</a></li>
+          <li><a href="/gayahidup">gaya hidup</a></li>
+          <li><a href="/entertaimen">entertainment</a></li>
+          <li><a href="/kesehatan">kesehatan</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/about/">About Us</a></li>
+          <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+          <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+          <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+     <a href="#">Scanfcode</a>.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<br>
+
+
+
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,243 @@
+{% extends 'core/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}WELCOME{% endblock %}</title>
+    {% block htmlhead %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    {% endblock htmlhead %}
+</head>
+<body>
+    {% block content %}
+
+    <!-- carousel auto Slide -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://akcdn.detik.net.id/visual/2022/07/25/indonesia-waspada-wabah-monkeypox_169.png?w=650" class="d-block w-100 mx-auto" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://akcdn.detik.net.id/visual/2023/10/08/anies-baswedan-bahas-isu-kesehatan_169.jpeg?w=650" class="d-block w-100 mx-auto" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://akcdn.detik.net.id/visual/2021/05/28/menjaga-kesehatan-mental-lansia_169.jpeg?w=650" class="d-block w-100 mx-auto" alt="...">
+          </div>
+        </div>
+        <button  id="kon" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+<!-- weather Widget -->
+<a class="weatherwidget-io" href="https://forecast7.com/en/n6d87107d49/west-bandung-regency/" data-label_1="BANDUNG BARAT" data-label_2="WEATHER" data-theme="original" data-basecolor="#dd4747" >BANDUNG BARAT WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<br>
+
+<!-- Grid Row columns  -->
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <br>
+        <img src="https://akcdn.detik.net.id/visual/2022/05/13/ilustrasi-cuaca-panas-2_169.jpeg?w=650&q=90" alt="">
+      </div>
+      <div class="col">
+        <br>
+        <h5>Selain Polusi, Udara Lembap Jakarta Juga Berbahaya buat Kesehatan</h5>
+        <br>
+        <p>Bukan cuma polusi udara dan cuaca panas, tingkat kelembapan udara di wilayah Jakarta dan sekitarnya juga tergolong tinggi.</p>
+        <br>
+        <p>Per Jumat (25/8) dini hingga siang hari saja, kelembapan udara di wilayah Jakarta dan sekitarnya mencapai 80 persen.</p>
+        <br>
+        <p>Dokter spesialis penyakit dalam hematologi onkologi medis Zubairi Djoerban mengatakan, kelembapan udara yang tinggi bisa berbahaya untuk kesehatan.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <br>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <h3>What Tranding Now</h3>
+      </div>
+   </div>
+  </div>
+<br>
+
+  <!-- Big Card -->
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/visual/2020/01/15/a93d3f16-7c74-4bf4-b622-55a9e6b3043e_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Ramai-ramai Isu Kesehatan di Indonesia Setahun Terakhir</h5>
+          <p class="card-text">Hari Kesehatan Sedunia dirayakan setiap tanggal 7 April, bertepatan dengan hari kelahiran Organisasi Kesehatan Dunia (WHO).</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/visual/2021/07/29/ilustrasi-perempuan-tersenyum_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">7 Kebiasaan Baik yang Bisa Meningkatkan Kesehatan Mental</h5>
+          <p class="card-text">Selain kesehatan fisik, penting juga untuk selalu menjaga kesehatan mental. Berikut ini sejumlah kebiasaan yang bisa meningkatkan kesehatan mental.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/visual/2022/11/17/ilustrasi-kesehatan-mental_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Jangan Dikesampingkan, Kesehatan Mental Jadi Hak Asasi Manusia</h5>
+          <p class="card-text">Hari Kesehatan Mental Sedunia diperingati pada 10 Oktober saban tahun.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/visual/2023/07/11/tenaga-kesehatan-tolak-ruu-kesehatan-14_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Ratusan Mahasiswa Demo Tolak RUU Kesehatan di DPRD Sulsel</h5>
+          <p class="card-text">Ratusan mahasiswa yang tergabung dalam Aliansi Perawat Sulawesi Selatan berunjukrasa</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+
+  <!-- Grid Teks -->
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <h3>Update Today</h3>
+      </div>
+  </div>
+  </div>
+
+  <br>
+
+<!-- Card Title -->
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+          <img src="https://akcdn.detik.net.id/visual/2023/07/11/tenaga-kesehatan-tolak-ruu-kesehatan-14_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Ratusan Mahasiswa Demo Tolak RUU Kesehatan di DPRD Sulsel</h5>
+            <p class="card-text">Ratusan mahasiswa yang tergabung dalam Aliansi Perawat Sulawesi Selatan berunjukrasa</p>
+          </div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+          <img src="https://akcdn.detik.net.id/visual/2021/09/07/ilustrasi-dokter_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Dokter Udayana Sebut Banyak WNA Buka Praktik Kesehatan Ilegal di Bali</h5>
+            <p class="card-text">Guru Besar Fakultas Kedokteran Universitas Udayana Prof Wimpie Pangkahila menyebut</p>
+          </div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+          <img src="https://akcdn.detik.net.id/visual/2020/02/18/6ee7ef67-cde6-4012-b66d-f951a8d2ac35_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pandemi Bikin Orang Makin Sadar Kesehatan Mental</h5>
+            <p class="card-text">Di zaman kiwari, kepedulian masyarakat terhadap kesehatan mental tampaknya mengalami peningkatan.</p>
+          </div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+          <img src="https://akcdn.detik.net.id/visual/2020/05/21/5e3a5400-0f4a-4acb-84c0-5f1363c36735_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">5 Tren Kesehatan di Tahun 2023, Olahraga 'Snack' Hingga Plester Mulut</h5>
+            <p class="card-text">Setiap pergantian tahun baru, kerap muncul pula tren kesehatan yang aneh dan luar biasa..</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+<!-- Footer  -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>About</h6>
+        <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+      </div>
+   
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Categories</h6>
+        <ul class="footer-links">
+          <li><a href="/trending">trending</a></li>
+          <li><a href="/olahraga">olahraga</a></li>
+          <li><a href="/politik">politik</a></li>
+          <li><a href="/gayahidup">gaya hidup</a></li>
+          <li><a href="/entertaimen">entertainment</a></li>
+          <li><a href="/kesehatan">kesehatan</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/about/">About Us</a></li>
+          <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+          <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+          <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+     <a href="#">Scanfcode</a>.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<br>
+
+    {% endblock %}
+</body>
+</html>

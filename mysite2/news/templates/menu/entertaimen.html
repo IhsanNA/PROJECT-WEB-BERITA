@@ -1,0 +1,243 @@
+{% extends 'core/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}WELCOME{% endblock %}</title>
+    {% block htmlhead %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    {% endblock htmlhead %}
+</head>
+<body>
+    {% block content %}
+
+    <!-- carousel auto Slide -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://akcdn.detik.net.id/visual/2023/01/07/girl-group-ive-3_169.jpeg?w=450&q=90" class="d-block w-100 mx-auto" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://akcdn.detik.net.id/visual/2023/10/10/boy-group-pentagon_169.jpeg?w=650" class="d-block w-100 mx-auto" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://akcdn.detik.net.id/visual/2023/10/25/lee-sun-kyun-4_169.jpeg?w=450&q=90" class="d-block w-100 mx-auto" alt="...">
+          </div>
+        </div>
+        <button  id="kon" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+<!-- weather Widget -->
+<a class="weatherwidget-io" href="https://forecast7.com/en/n6d87107d49/west-bandung-regency/" data-label_1="BANDUNG BARAT" data-label_2="WEATHER" data-theme="original" data-basecolor="#dd4747" >BANDUNG BARAT WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<br>
+
+<!-- Grid Row columns  -->
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <br>
+        <img src="https://akcdn.detik.net.id/visual/2023/04/24/blackpink-kembali-gemparkan-panggung-coachella-2023-7_169.jpeg?w=650&q=90" alt="">
+      </div>
+      <div class="col">
+        <br>
+        <h5>3 Member BLACKPINK Dirumorkan Akhiri Kontrak dengan YG Entertainment</h5>
+        <br>
+        <p>Tiga member girl group BLACKPINK dirumorkan tidak akan memperpanjang kontrak dengan YG Entertainment. Rose menjadi satu-satunya member grup tersebut yang bakal memperbarui kontrak.</p>
+        <br>
+        <p>Hal tersebut diungkap pertama kali oleh Sports Seoul pada Kamis (21/9), berdasarkan sejumlah sumber dari industri musik.</p>
+        <br>
+        <p>Media tersebut menyebut bahwa BLACKPINK dan YG Entertainment sedang masih dalam proses negosiasi akhir terkait kontrak tersebut.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- Header -->
+  <br>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <h3>What Tranding Now</h3>
+      </div>
+   </div>
+  </div>
+<br>
+
+<!-- Big Card -->
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/visual/2020/05/18/afd29201-af62-4a10-8b3f-c3e0aed6617a_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">SM Bantah Ketahui Rencana Baekhyun EXO Bikin Agensi Baru</h5>
+          <p class="card-text">SM Entertainment membantah pernyataan Baekhyun EXO yang mengatakan pihak</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/visual/2023/08/09/winter-aespa_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Kronologi Winter aespa Diancam hingga Respons SM Entertainment</h5>
+          <p class="card-text">Kasus ancaman keselamatan seperti penusukan marak di Korea Selatan akhir-akhir ini.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/visual/2021/08/25/lucas-wayv-lucas-nct-1_169.png?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">SM Entertainment: Lucas Keluar dari NCT dan WayV</h5>
+          <p class="card-text">SM Entertainment mengumumkan Lucas resmi keluar dari NCT dan WayV.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/visual/2023/04/24/blackpink-kembali-gemparkan-panggung-coachella-2023-7_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Member BLACKPINK Dirumorkan Akhiri Kontrak</h5>
+          <p class="card-text">Tiga member girl group BLACKPINK dirumorkan tidak akan memperpanjang kontrak</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+
+  <!-- Grid Teks -->
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <h3>Update Today</h3>
+      </div>
+  </div>
+  </div>
+
+  <br>
+
+<!-- Card Title -->
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+          <img src="https://akcdn.detik.net.id/visual/2019/11/19/182d0a4e-9744-49cf-b61d-e3f66b5aa0a5_169.png?w=650&q=90" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">YG Entertainment Konfirmasi Lisa BLACKPINK Ditipu Eks Manajer</h5>
+            <p class="card-text">mengonfirmasi Lisa BLACKPINK menjadi korban penipuan</p>
+          </div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+          <img src="https://akcdn.detik.net.id/visual/2019/08/05/3d8ddb4d-5a26-4072-89f8-463da6d3ee46_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Agensi Konfirmasi Hubungan Kang Daniel dan Jihyo TWICE</h5>
+            <p class="card-text">JYP Entertainment mengonfirmasi artinya, Jihyo TWICE berkencan</p>
+          </div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+          <img src="https://akcdn.detik.net.id/visual/2019/07/26/58b45916-601e-442c-88c3-014a8e4eccac_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">JYP Entertainment Polisikan Komentar Jahat pada Mina 'TWICE'</h5>
+            <p class="card-text">JYP Entertainment resmi melaporkan komentar-komentar jahat terhadap member girlband TWICE.</p>
+          </div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+          <img src="https://media.cnn.com/api/v1/images/stellar/prod/211201141402-01-alec-baldwin-george-stephanopoulos-abc-news-interview-clip-screenshot.jpg?c=16x9&q=w_850,c_fill" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Alec Baldwin: ‘I didn’t pull the trigger’ of gun on ‘Rust’ set</h5>
+            <p class="card-text">Alec Baldwin told ABC News he never pulled the trigger of the gun that shot director of photography Halyna Hutchins </p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<!-- Footer  -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>About</h6>
+        <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+      </div>
+   
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Categories</h6>
+        <ul class="footer-links">
+          <li><a href="/trending">trending</a></li>
+          <li><a href="/olahraga">olahraga</a></li>
+          <li><a href="/politik">politik</a></li>
+          <li><a href="/gayahidup">gaya hidup</a></li>
+          <li><a href="/entertaimen">entertainmen</a></li>
+          <li><a href="/kesehatan">kesehatan</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/about/">About Us</a></li>
+          <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+          <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+          <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+     <a href="#">Scanfcode</a>.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<br>
+
+
+    {% endblock %}
+</body>
+</html>
