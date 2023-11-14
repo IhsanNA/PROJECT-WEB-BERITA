@@ -4,6 +4,7 @@ from . import views
 app_name = 'news'
 
 urlpatterns = [
+    path('all',views.all, name='all'),
     path('trending',views.trending, name='trending'),
     path('politik',views.politik, name='politik'),
     path('olahraga',views.olahraga, name='olahraga'),
