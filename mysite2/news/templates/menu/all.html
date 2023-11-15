@@ -101,63 +101,17 @@
 
   <br>
 
-<!-- Card Title -->
-<div class="container text-center">
-    <div class="row">
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://akcdn.detik.net.id/visual/2023/10/18/presiden-as-joe-biden-menghadiri-pertemuan-dengan-perdana-menteri-israel-benjamin-netanyahu-saat-ia-mengunjungi-israel-di-teng-1_169.jpeg?w=715&q=90" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Menteri Israel Ancam Nuklir Gaza, AS Akhirnya Buka Suara</h5>
-              <p class="card-text">Amerika Serikat mengecam komentar anggota junior kabinet Israel yang menyuarakan keterbukaan terhadap gagasan Israel.</p>
-            </div>
-          </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://akcdn.detik.net.id/community/media/visual/2023/11/05/kamp-pengungsi-maghazi-di-gaza-diserang-israel-30-orang-tewas-4_169.jpeg?w=700&q=90" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Ratusan Ribu Pekerjaan di Gaza Hilang Buntut Konflik</h5>
-              <p class="card-text">Badan Tenaga Kerja Perserikatan Bangsa-Bangsa (PBB) mencatat 61% pekerjaan hilang di Gaza akibat perang.</p>
-            </div>
-          </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://akcdn.detik.net.id/visual/2023/11/07/yahya-sinwar-pemimpin-hamas-di-gaza-memimpin-pertemuan-dengan-para-pemimpin-faksi-palestina-di-kantornya-di-kota-gaza-ap-photo_169.jpeg?w=715&q=90" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"> Siapa Yahya Sinwar, Pentolan Hamas yang Jadi Buronan Israel?</h5>
-              <p class="card-text">Kelompok pejuang Palestina, Hamas, menjadi sorotan dunia internasional. Pada 7 Oktober lalu, dengan persenjataan lengkap.</p>
-            </div>
-          </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://akcdn.detik.net.id/community/media/visual/2023/11/02/rumah-sakit-indonesia-di-jalur-gaza.jpeg?w=700&q=90" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bantah Tuduhan Israel Soal Terowongan Hamas</h5>
-              <p class="card-text">Tim pembangunan Rumah Sakit (RS) Indonesia-Palestina membantah tuduhan Israel</p>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
-
-  <br>
-
  <!-- Card -->
- 
 <div class="container text-center">
     <div class="row">
         {% for berita in beritas %}
       <div class="col">
-        <div class="card" style="width: 18rem;">
-            <img src="{{berita.gambar.url}}" class="card-img-top" alt="...">
+        <div class="card" style="width: 19rem;">
+            <img src="{{berita.gambar.url}}" class="card-img-top">
             <div class="card-body">
                 <h6>{{berita.kategori}}</h6>
                 <h6>{{berita.judul}}</h6>
-                <p class="card-text">{{berita.isi}}</p>
-              <button type="button" class="btn btn-danger" onclick="location.href='/isiberita'">click here</button>
+              <button type="button" class="btn btn-danger"><a href="{% url 'news:isi' berita.id %}" style="text-decoration: none; color: white;">Click Here</a></button>
             </div>
           </div>
           <br>

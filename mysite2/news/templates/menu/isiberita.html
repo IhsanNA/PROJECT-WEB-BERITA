@@ -1,0 +1,98 @@
+{% extends 'core/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}WELCOME{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    {% block htmlhead %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    {% endblock htmlhead %}
+</head>
+<body>
+    {% block content %}
+<div class="container">
+  <div class="cover">
+    <img src="https://www.shutterstock.com/shutterstock/videos/4924517/thumb/2.jpg?ip=x480" style="width: 1890px; height: 350px; margin-left: -265px;" alt="">
+    <img style="border-radius: 50%; width: 180px; height: 180px; margin-left: -100px; margin-top: -120px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/CNN_International_logo.svg/2048px-CNN_International_logo.svg.png" alt="">
+    <h2 class="name" style="border-radius: 50%; margin-left: 125px; margin-top: -120px; color: white;">CNN INDONESIA</h2>
+  </div>
+</div>
+
+<br><br>
+
+<p style="padding-left: 180px; margin-bottom: 0; color: grey; margin-top: 50px;">Internasional news</p>
+<h1 style="padding-left: 180px; padding-top: 0px; font-weight: bold;">{{beritas.judul}}</h1>
+<p style="padding-left: 180px;"> <span style="color: #0077b6;">cnn </span><span style="color: grey;">- Khazam alim - cnn indonesia</span></p>
+
+<br>
+
+<img src="{{beritas.gambar.url}}" alt="" style="padding-left: 180px; padding-top: 20px;">
+<p style="color: grey; padding-left: 180px; font-size: small; padding-top: 0;">24 Oktober 2023</p>
+<h5 style="padding-left: 180px; padding-top: 0px;" class="fw-bold">{{beritas.isi}}</h5>
+
+<br>
+
+<h3 style="padding-left: 180px; padding-top: 0px;">Artikel-artikel yang direkomendasikan</h3>
+
+<br>
+
+<div class="card mb-3" style="max-width: 540px;  margin-left: 180px;">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/C515/production/_131635405_gettyimages-1757168396.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Palestina: Israel tuduh RS Indonesia di Gaza</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="card mb-3" style="max-width: 540px;  margin-left: 180px;">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/3211/live/11cb2a50-690e-11ee-bd9f-271a093e676d.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><a style="text-decoration: none; color: black;" href="https://www.bbc.com/indonesia/articles/cd15rrwpz0do">Siapa saja para pimpinan penting Hamas?</a></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="card mb-3" style="max-width: 540px;  margin-left: 180px;">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/1045D/production/_131435666_gettyimages-1722738062.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Gaza: Serangan terhadap konvoi kendaraan warga</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="card mb-3" style="max-width: 540px;  margin-left: 180px;">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="https://ichef.bbci.co.uk/news/768/cpsprodpb/2e67/live/8b9771b0-7857-11ee-8070-13aa5708c89f.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Apa tujuan akhir invasi darat Israel ke Gaza?</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+   
+    {% endblock %}
+</body>
+</html>
