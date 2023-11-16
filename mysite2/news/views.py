@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404, catID
-from . import models, catID
+from django.shortcuts import render, get_object_or_404
+from . import models
 # Create your views here.
 
 def all(request):
@@ -15,6 +15,8 @@ def isi(request, id):
 def trending(request):
     berita = models.berita.objects.filter(status='publish')
     kategori = models.categories.objects.all()
+    catID = 2
+
     if catID :
         berita = models.berita.objects.filter(kategori = catID)
     else :
@@ -25,17 +27,72 @@ def trending(request):
     return render(request, 'menu/trending.html', context)
 
 def politik(request):
-    return render(request, 'menu/politik.html')
+    berita = models.berita.objects.filter(status='publish')
+    kategori = models.categories.objects.all()
+    catID = 1
+    
+    if catID :
+        berita = models.berita.objects.filter(kategori = catID)
+    else :
+        berita = models.berita.objects.filter(status='publish')
+
+    context = {'beritas' : berita, 'kategori' : kategori}
+
+    return render(request, 'menu/politik.html', context)
 
 def olahraga(request):
-    return render(request, 'menu/olahraga.html')
+    berita = models.berita.objects.filter(status='publish')
+    kategori = models.categories.objects.all()
+    catID = 3
+    
+    if catID :
+        berita = models.berita.objects.filter(kategori = catID)
+    else :
+        berita = models.berita.objects.filter(status='publish')
+
+    context = {'beritas' : berita, 'kategori' : kategori}
+
+    return render(request, 'menu/olahraga.html', context)
 
 def kesehatan(request):
-    return render(request, 'menu/kesehatan.html')
+    berita = models.berita.objects.filter(status='publish')
+    kategori = models.categories.objects.all()
+    catID = 4
+    
+    if catID :
+        berita = models.berita.objects.filter(kategori = catID)
+    else :
+        berita = models.berita.objects.filter(status='publish')
+
+    context = {'beritas' : berita, 'kategori' : kategori}
+
+    return render(request, 'menu/kesehatan.html', context)
 
 def gayahidup(request):
-    return render(request, 'menu/gayahidup.html')
+    berita = models.berita.objects.filter(status='publish')
+    kategori = models.categories.objects.all()
+    catID = 5
+    
+    if catID :
+        berita = models.berita.objects.filter(kategori = catID)
+    else :
+        berita = models.berita.objects.filter(status='publish')
+
+    context = {'beritas' : berita, 'kategori' : kategori}
+
+    return render(request, 'menu/gayahidup.html', context)
 
 def entertaimen(request):
-    return render(request, 'menu/entertaimen.html')
+    berita = models.berita.objects.filter(status='publish')
+    kategori = models.categories.objects.all()
+    catID = 4
+    
+    if catID :
+        berita = models.berita.objects.filter(kategori = catID)
+    else :
+        berita = models.berita.objects.filter(status='publish')
+
+    context = {'beritas' : berita, 'kategori' : kategori}
+
+    return render(request, 'menu/entertaimen.html', context)
 

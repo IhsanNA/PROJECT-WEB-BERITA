@@ -136,49 +136,25 @@
   <br>
 
 
-<!-- Card Title -->
-<div class="container text-center">
+  <div class="container text-center">
     <div class="row">
+        {% for berita in beritas %}
       <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://akcdn.detik.net.id/visual/2023/10/27/megawati-hangestri-pertiwi-3_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card" style="width: 19rem;">
+            <img src="{{berita.gambar.url}}" class="card-img-top">
             <div class="card-body">
-              <h5 class="card-title">Top 3 Sports: Megawati Dibela Pelatih, FIFA Soroti Iqbal Gwijangge</h5>
-              <p class="card-text">Kiprah Megawati Hangestri Pertiwi di liga voli Korea Selatan.</p>
+                <h6>{{berita.kategori}}</h6>
+                <h6>{{berita.judul}}</h6>
+              <button type="button" class="btn btn-danger"><a href="{% url 'news:isi' berita.id %}" style="text-decoration: none; color: white;">Click Here</a></button>
             </div>
           </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://akcdn.detik.net.id/visual/2023/06/24/indonesia-ke-final-avc-challenge-cup-2023_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Top 3 Sports: Tangis Megawati di Korea, Indonesia Jauhi Malaysia</h5>
-              <p class="card-text">Bintang Timnas Voli Putri Indonesia Megawati Hangestri Pertiwi menangis</p>
-            </div>
-          </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://akcdn.detik.net.id/visual/2023/10/30/megawati-hangestri-pertiwi-dan-giovanna-milana_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Megawati Disebut Supel, Messi Menang Ballon d'Or</h5>
-              <p class="card-text">Berita tentang Megawati Hangestri Pertiwi bersama Red Sparks dan Lionel Messi yang menang</p>
-            </div>
-          </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://akcdn.detik.net.id/visual/2023/07/04/ketua-umum-pssi-erick-thohir-3_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Erick: Jangan Percaya Berita Indonesia Ditinggalkan Australia</h5>
-              <p class="card-text">Ketua Umum PSSI Erick Thohir merasa keberatan Indonesia disebut ditinggal Australia</p>
-            </div>
-          </div>
-      </div>
+          <br>
+        </div>
+        {% endfor %}
     </div>
-  </div>
+</div>
 
-  <br>
+<br>
 
 <!-- Footer  -->
 <footer class="site-footer">

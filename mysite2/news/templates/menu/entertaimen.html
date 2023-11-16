@@ -135,50 +135,25 @@
 
   <br>
 
-<!-- Card Title -->
-<div class="container text-center">
-  <div class="row">
-    <div class="col">
-      <div class="card" style="width: 15rem;">
-          <img src="https://akcdn.detik.net.id/visual/2019/11/19/182d0a4e-9744-49cf-b61d-e3f66b5aa0a5_169.png?w=650&q=90" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">YG Entertainment Konfirmasi Lisa BLACKPINK Ditipu Eks Manajer</h5>
-            <p class="card-text">mengonfirmasi Lisa BLACKPINK menjadi korban penipuan</p>
+  <div class="container text-center">
+    <div class="row">
+        {% for berita in beritas %}
+      <div class="col">
+        <div class="card" style="width: 19rem;">
+            <img src="{{berita.gambar.url}}" class="card-img-top">
+            <div class="card-body">
+                <h6>{{berita.kategori}}</h6>
+                <h6>{{berita.judul}}</h6>
+              <button type="button" class="btn btn-danger"><a href="{% url 'news:isi' berita.id %}" style="text-decoration: none; color: white;">Click Here</a></button>
+            </div>
           </div>
+          <br>
         </div>
+        {% endfor %}
     </div>
-    <div class="col">
-      <div class="card" style="width: 15rem;">
-          <img src="https://akcdn.detik.net.id/visual/2019/08/05/3d8ddb4d-5a26-4072-89f8-463da6d3ee46_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Agensi Konfirmasi Hubungan Kang Daniel dan Jihyo TWICE</h5>
-            <p class="card-text">JYP Entertainment mengonfirmasi artinya, Jihyo TWICE berkencan</p>
-          </div>
-        </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 15rem;">
-          <img src="https://akcdn.detik.net.id/visual/2019/07/26/58b45916-601e-442c-88c3-014a8e4eccac_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">JYP Entertainment Polisikan Komentar Jahat pada Mina 'TWICE'</h5>
-            <p class="card-text">JYP Entertainment resmi melaporkan komentar-komentar jahat terhadap member girlband TWICE.</p>
-          </div>
-        </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 15rem;">
-          <img src="https://media.cnn.com/api/v1/images/stellar/prod/211201141402-01-alec-baldwin-george-stephanopoulos-abc-news-interview-clip-screenshot.jpg?c=16x9&q=w_850,c_fill" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Alec Baldwin: ‘I didn’t pull the trigger’ of gun on ‘Rust’ set</h5>
-            <p class="card-text">Alec Baldwin told ABC News he never pulled the trigger of the gun that shot director of photography Halyna Hutchins </p>
-          </div>
-        </div>
-    </div>
-  </div>
 </div>
 
 <br>
-
 <!-- Footer  -->
 <footer class="site-footer">
   <div class="container">

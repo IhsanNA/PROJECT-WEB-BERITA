@@ -137,49 +137,25 @@
 
 
 
-<!-- Card Title -->
-<div class="container text-center">
+  <div class="container text-center">
     <div class="row">
+        {% for berita in beritas %}
       <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://akcdn.detik.net.id/visual/2019/12/06/3bb19513-c346-4058-bc9f-55894befe961_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+        <div class="card" style="width: 19rem;">
+            <img src="{{berita.gambar.url}}" class="card-img-top">
             <div class="card-body">
-              <h5 class="card-title">Pertama Kalinya, Mikroplastik Ditemukan dalam ASI</h5>
-              <p class="card-text">Mikroplastik kini telah jadi masalah global. Studi teranyar bahkan menemukan mikroplastik</p>
+                <h6>{{berita.kategori}}</h6>
+                <h6>{{berita.judul}}</h6>
+              <button type="button" class="btn btn-danger"><a href="{% url 'news:isi' berita.id %}" style="text-decoration: none; color: white;">Click Here</a></button>
             </div>
           </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://akcdn.detik.net.id/community/media/visual/2023/11/05/kamp-pengungsi-maghazi-di-gaza-diserang-israel-30-orang-tewas-4_169.jpeg?w=700&q=90" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Ratusan Ribu Pekerjaan di Gaza Hilang Buntut Konflik</h5>
-              <p class="card-text">Badan Tenaga Kerja Perserikatan Bangsa-Bangsa (PBB) mencatat 61% pekerjaan hilang di Gaza akibat perang.</p>
-            </div>
-          </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://akcdn.detik.net.id/visual/2022/06/15/reshuffle-kabinet-8_169.png?w=650&q=90" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Viral Hidup Mewah Kepala BPN Jaktim, Hadi Tjahjanto Bakal Tindak Tegas</h5>
-              <p class="card-text">Menteri Agraria dan Tata Ruang/Badan Pertanahan Nasional (ATR/BPN) Hadi Tjahjanto bakal menindak</p>
-            </div>
-          </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://akcdn.detik.net.id/visual/2022/01/04/ilustrasi-perempuan-menangis_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Studi: Risiko Gangguan Kesehatan Mental Meningkat usai Covid-19</h5>
-              <p class="card-text">Studi terbaru menunjukkan orang yang telah pulih dari Covid-19 memiliki risiko lebih tinggi</p>
-            </div>
-          </div>
-      </div>
+          <br>
+        </div>
+        {% endfor %}
     </div>
-  </div>
+</div>
 
-  <br>
+<br>
 
 <!-- Footer  -->
 <footer class="site-footer">

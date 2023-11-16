@@ -135,51 +135,25 @@
 
   <br>
 
-<!-- Card Title -->
-<div class="container text-center">
-  <div class="row">
-    <div class="col">
-      <div class="card" style="width: 15rem;">
-          <img src="https://akcdn.detik.net.id/visual/2023/07/11/tenaga-kesehatan-tolak-ruu-kesehatan-14_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Ratusan Mahasiswa Demo Tolak RUU Kesehatan di DPRD Sulsel</h5>
-            <p class="card-text">Ratusan mahasiswa yang tergabung dalam Aliansi Perawat Sulawesi Selatan berunjukrasa</p>
+  <div class="container text-center">
+    <div class="row">
+        {% for berita in beritas %}
+      <div class="col">
+        <div class="card" style="width: 19rem;">
+            <img src="{{berita.gambar.url}}" class="card-img-top">
+            <div class="card-body">
+                <h6>{{berita.kategori}}</h6>
+                <h6>{{berita.judul}}</h6>
+              <button type="button" class="btn btn-danger"><a href="{% url 'news:isi' berita.id %}" style="text-decoration: none; color: white;">Click Here</a></button>
+            </div>
           </div>
+          <br>
         </div>
+        {% endfor %}
     </div>
-    <div class="col">
-      <div class="card" style="width: 15rem;">
-          <img src="https://akcdn.detik.net.id/visual/2021/09/07/ilustrasi-dokter_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Dokter Udayana Sebut Banyak WNA Buka Praktik Kesehatan Ilegal di Bali</h5>
-            <p class="card-text">Guru Besar Fakultas Kedokteran Universitas Udayana Prof Wimpie Pangkahila menyebut</p>
-          </div>
-        </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 15rem;">
-          <img src="https://akcdn.detik.net.id/visual/2020/02/18/6ee7ef67-cde6-4012-b66d-f951a8d2ac35_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Pandemi Bikin Orang Makin Sadar Kesehatan Mental</h5>
-            <p class="card-text">Di zaman kiwari, kepedulian masyarakat terhadap kesehatan mental tampaknya mengalami peningkatan.</p>
-          </div>
-        </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 15rem;">
-          <img src="https://akcdn.detik.net.id/visual/2020/05/21/5e3a5400-0f4a-4acb-84c0-5f1363c36735_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">5 Tren Kesehatan di Tahun 2023, Olahraga 'Snack' Hingga Plester Mulut</h5>
-            <p class="card-text">Setiap pergantian tahun baru, kerap muncul pula tren kesehatan yang aneh dan luar biasa..</p>
-          </div>
-        </div>
-    </div>
-  </div>
 </div>
 
-
 <br>
-
 <!-- Footer  -->
 <footer class="site-footer">
   <div class="container">

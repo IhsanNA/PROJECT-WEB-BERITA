@@ -137,49 +137,25 @@
 
 
 
-<!-- Card Title -->
-<div class="container text-center">
+  <div class="container text-center">
     <div class="row">
+        {% for berita in beritas %}
       <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://static.republika.co.id/uploads/images/inpicture_slide/057099200-1699351509-830-556.jpg" class="card-img-top" alt="...">
+        <div class="card" style="width: 19rem;">
+            <img src="{{berita.gambar.url}}" class="card-img-top">
             <div class="card-body">
-              <h5 class="card-title">Agus Subiyanto Tegaskan tidak Ada Intervensi Jokowi di TNI</h5>
-              <p class="card-text">Jenderal Agus Subiyanto memastikan netralitas TNI dalam tahapan dan pelaksanaan pemilihan</p>
+                <h6>{{berita.kategori}}</h6>
+                <h6>{{berita.judul}}</h6>
+              <button type="button" class="btn btn-danger"><a href="{% url 'news:isi' berita.id %}" style="text-decoration: none; color: white;">Click Here</a></button>
             </div>
           </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://static.republika.co.id/uploads/images/inpicture_slide/selamat-ginting-_140323200430-405.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Putusan MK Timbulkan Instabilitas Politik Nasional</h5>
-              <p class="card-text">Keputusan Mahkamah Konstitusi (MK) mengabulkan permohonan uji materi Pasal 169 huruf q UU 7/2017.</p>
-            </div>
-          </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://img.antaranews.com/cache/1200x800/2023/11/03/030723-Latif-Banjarmasin-gelar-Kirab-Pemilu-2024-tingkatkan-partisipasi-pemilih.mp4_snapshot_01.42.640.jpg.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Politik, hukum dan kriminal, kemarin dari berita seputar KPU Kalsel hingga kasus peredaran Narkoba</h5>
-              <p class="card-text">Kelompok pejuang Palestina, Hamas, menjadi sorotan dunia internasional.</p>
-            </div>
-          </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-            <img src="https://akcdn.detik.net.id/community/media/visual/2023/11/02/rumah-sakit-indonesia-di-jalur-gaza.jpeg?w=700&q=90" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bantah Tuduhan Israel Soal Terowongan Hamas</h5>
-              <p class="card-text">Tim pembangunan Rumah Sakit (RS) Indonesia-Palestina membantah tuduhan Israel</p>
-            </div>
-          </div>
-      </div>
+          <br>
+        </div>
+        {% endfor %}
     </div>
-  </div>
+</div>
 
-  <br>
+<br>
 
 <!-- Footer  -->
 <footer class="site-footer">
