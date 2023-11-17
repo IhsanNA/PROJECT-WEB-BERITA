@@ -3,14 +3,20 @@ from . import models
 # Create your views here.
 
 def all(request):
+    if 'cari' in request.GET:
+        cari = request.GET['cari']
+        berita = models.berita.objects.filter(judul__icontains=cari)
+    else :
         berita = models.berita.objects.all()
-        context = {'beritas' : berita}
-        return render(request, 'menu/all.html', context)
+
+    context = {'beritas' : berita}
+    return render(request, 'menu/all.html', context)
+
 
 def isi(request, id):
-        berita = get_object_or_404(models.berita, pk=id)
-        context = {'beritas' : berita}
-        return render(request, 'menu/isiberita.html', context)
+    berita = get_object_or_404(models.berita, pk=id)
+    context = {'beritas' : berita}
+    return render(request, 'menu/isiberita.html', context)
 
 def trending(request):
     berita = models.berita.objects.filter(status='publish')

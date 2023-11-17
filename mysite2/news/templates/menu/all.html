@@ -14,6 +14,7 @@
 </head>
 <body>
     {% block content %}
+
   <!-- Header -->
   <br>
   <div class="container text-center">
@@ -103,6 +104,18 @@
   </div>
   </div>
 
+  <!-- tombol search -->
+  <nav class="navbar navbar-expand-lg bg-danger">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="d-flex" role="search" style=" margin: auto; width: 45%; padding: 2px;" >
+          <input class="form-control me-2" type="search" name="cari" placeholder="cari berita" aria-label="Search">
+          <button type="submit" class="btn btn-success">cari</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
   <br>
 
  <!-- Card -->
@@ -167,13 +180,10 @@
      <a href="#">Scanfcode</a>.
         </p>
       </div>
-
-     
     </div>
   </div>
 </footer>
    
-
     {% endblock %}
 </body>
 </html>
