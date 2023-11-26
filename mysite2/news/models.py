@@ -57,7 +57,7 @@ class berita(models.Model):
     deskripsi = models.CharField(max_length=255, null=True)
     isi = models.CharField(max_length=9999)
     kategori = models.ForeignKey(categories,on_delete=models.CASCADE)
-    kategoriID = models.IntegerField(max_length=255, null=True)
+    kategoriID = models.IntegerField(null=True)
     gambar = models.ImageField(upload_to='media', height_field=None, width_field=None, max_length=100)
     penulis = models.CharField(max_length=255)
     status = models.CharField(choices=STATUS, max_length=200, null=True)

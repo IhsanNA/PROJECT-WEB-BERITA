@@ -4,7 +4,7 @@ from news import models as mdl
 
 # Create your views here.
 
-def index (request):
+def index(request):
     berita = models.beritaupdate1.objects.filter(status='publish')
     berita2 = mdl.berita.objects.filter(status='publish')
     kategori = mdl.categories.objects.all()
